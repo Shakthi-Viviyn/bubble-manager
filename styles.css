@@ -1,0 +1,198 @@
+body {
+    background-color: #ECF9FF;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}/* E3F6FF */
+.circle{
+    display: inline-block;
+    border-radius: 100%;
+    position: absolute;
+    border-color: wheat;
+}
+
+.circle:hover{
+    height: 240px;
+    width: 240px;
+    z-index: 2;
+    overflow-wrap: break-word;
+    text-align: center;
+    border-style: outset;
+    border-width: 3px;
+    border-color: #F2921D;
+}
+
+/*
+Size 1 : 120px radius
+Size 2: 80px radius
+Size 3: 60px radius
+Size 4: 40px radius
+*/
+
+.size1{
+    height: 240px;
+    width: 240px;
+    z-index: 1;
+}
+.size2{
+    height: 160px;
+    width: 160px;
+    z-index: 1;
+}
+.size3{
+    height: 120px;
+    width: 120px;
+    z-index: 1;
+}
+.size4{
+    height: 80px;
+    width: 80px;
+    z-index: 1;
+}
+
+#addBtn{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    position: fixed;
+    right:40px;
+    top:40px;
+    z-index: 3;
+    background-image: url(assets/plus.png);
+    cursor: pointer;
+    background-size: cover;
+    border-style: outset;
+    border-width: 2px;
+}
+h4{
+    position: relative;
+    top:20%;
+    text-decoration: none;
+    margin:10px auto 0 auto;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+p{
+    max-width:max-content - 5px;
+    white-space: pre-line;
+    position: relative;
+    top:25%;
+    display: none;
+    margin:10px auto 8px auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#bubbleCanvas {
+    display: block;
+    position: absolute;
+    z-index: 1;
+}
+#addMenu {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background-color: #F8CBA6;
+    opacity: 70%;    
+    z-index: 4;
+}  
+/* #f28888 */
+.inputElements{
+    display:block;
+    margin: 20px auto 20px auto;
+    text-align: center;
+}
+.topElement{
+    margin: 15% auto 20px auto;
+}
+
+#closeBtn{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    top: 40px;
+    right:40px;
+    background-image: url(assets/close.png);
+    cursor: pointer;
+    background-size: cover;
+    border-style: outset;
+    border-width: 2px;
+}
+label{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    display: inline;
+}
+#submitBtn{
+    font-size: 16px;
+    color: whitesmoke;
+    height: 30px;
+    width: 200px;
+    border: none;
+    border-radius: 12px;
+    background-color: green;
+    border-style: outset;
+    border-width: 2px;
+    border-color: grey;
+
+}
+
+#nameTask{
+    border: none;
+    border-radius: 6px;
+
+}
+#descriptionTask{
+    border: none;
+    border-radius: 6px;
+}
+#dateTask{
+    border: none;
+    border-radius: 6px;
+}
+#timeTask{
+    border: none;
+    border-radius: 6px;
+}
+/*
+#priorityTask{
+    
+}*/
+#colorTask{
+    border: none;
+    border-radius: 8px;
+}
+
+.colorTable{
+    display: inline-block;
+}
+.colorBoxes{
+    height: 20px; 
+    width: 20px;
+    margin: 0 auto 0 auto;
+}
+/*
+Colors:
+1: #DB5657 (Red)
+2: #67BB6D (Green)
+3: #3DC7C7 (Sky blue)
+4: #D4DC6C (Yellow)
+5: #9292C8 (Purple)
+6: #60DAAC (Florescent Green)
+*/
+#color1{
+    background-color: #DB5657 ;
+}
+#color2{
+    background-color: #67BB6D;
+}
+#color3{
+    background-color: #3DC7C7;
+}
+#color4{
+    background-color: #D4DC6C;
+}
+#color5{
+    background-color: #9292C8;
+}

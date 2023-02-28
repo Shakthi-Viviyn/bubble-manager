@@ -8,11 +8,12 @@ document.getElementById("dateTask").setAttribute("min",currentDate.toISOString()
 
 allPosData = JSON.parse(localStorage.getItem("CircleData"));
 
-if (allPosData !== null){
+if ((allPosData !== null) &&(allPosData !== "")){
     nextId = allPosData.length;
 }else{
     allPosData = [];
 }
+
 for (var i = 0; i < allPosData.length; i++){
     var objectDate = new Date(allPosData[i].date);
     allPosData[i].date = objectDate;
@@ -125,6 +126,7 @@ document.getElementById("submitBtn").addEventListener("click",function(e){
     newCircle.y = posData[1];
     attachListeners(newCircle.id);
     allPosData.push(newCircle);
+    console.log(allPosData)
     var updatedData = JSON.stringify(allPosData);
     localStorage.setItem("CircleData",updatedData);
     document.getElementById("nameTask").value = "";
@@ -207,6 +209,7 @@ function increaseBounds(){
 
 function checkOverlap(x,y,size){
     for (var id = 0; id < allPosData.length; id++){
+        console.log(allPosData)
         var xDiffSqr = Math.pow((allPosData[id].x - x),2);
         var yDiffSqr = Math.pow((allPosData[id].y - y),2);
         var distanceBtwCentres = Math.sqrt((xDiffSqr + yDiffSqr));
@@ -293,11 +296,14 @@ var popSound = new Audio("assets/pop.mp3");
 
 function deleteBubble(id){
     var nodeToRemove = document.getElementById(id);
+    console.log(nodeToRemove);
     document.getElementById("bubbleCanvas").removeChild(nodeToRemove);
     if (id === allPosData.length-1){
         allPosData.pop();
     }else{
         var lastElement = allPosData.pop();
+        document.getElementById(lastElement.id).setAttribute("id",id);
+        attachListeners(id);
         lastElement.id = id;
         allPosData[id] = lastElement;  
     }

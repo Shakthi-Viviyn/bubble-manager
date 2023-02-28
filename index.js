@@ -312,6 +312,10 @@ function deleteBubble(id){
     localStorage.setItem("CircleData",updatedData);
 }
 
+function resetData(){
+    localStorage.setItem("CircleData","[]");
+}
+
 /*
 Colors:
 1: #DB5657 (Red)
